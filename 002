@@ -1,0 +1,14 @@
+$u  = "";
+$fb = "vivendosobreduasrodas/videos/812119455870382/";
+/**
+ * template
+ */
+$rt = "<div id='fb-root'></div>";
+$sc = "<script async defer src='https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2'></script>";
+$ff = "<div class='fb-video' data-href='https://www.facebook.com/$fb' ";
+$ff .= "data-width='200' data-autoplay='true' data-allowfullscreen='false'></div>";
+$tw = "<iframe referrerpolicy='no-referrer' src='https://player.twitch.tv/?channel=$u&enableExtensions=false&muted=true&player=popout&volume=0'></iframe>";
+echo "<div style='display:none'>";
+if($u) echo $tw;
+if($fb) echo $rt.$sc.$ff;
+echo "</div>";
