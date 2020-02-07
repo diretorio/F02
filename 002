@@ -1,14 +1,34 @@
-$u  = "";
-$fb = "vivendosobreduasrodas/videos/603997523491491/";
+$fb_on      = true;
+$tw_on      = off;
+
+$tw_list = [
+    "carollilium",
+    "flokitvbr",
+];
+$fb_list = [
+    "vivendosobreduasrodas/videos/711523662287675/",
+    "vivendosobreduasrodas/videos/715643831875658/",
+    "vivendosobreduasrodas/videos/794376410669066/",
+    "vivendosobreduasrodas/videos/812119455870382/",
+    "vivendosobreduasrodas/videos/603997523491491/",
+   
+];
+
 /**
  * template
  */
-$rt = "<div id='fb-root'></div>";
-$sc = "<script async defer src='https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2'></script>";
-$ff = "<div class='fb-video' data-href='https://www.facebook.com/$fb' ";
-$ff .= "data-width='200' data-autoplay='true' data-allowfullscreen='false'></div>";
-$tw = "<iframe referrerpolicy='no-referrer' src='https://player.twitch.tv/?channel=$u&enableExtensions=false&muted=true&player=popout&volume=0'></iframe>";
+
+$fb  = "<div id='fb-root'></div>";
+$fb .= "<script async defer src='https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2'></script>";
+$ff  = "";
+foreach($fb_list as $link)
+    $ff .= "<div class='fb-video' data-href='https://www.facebook.com/$link' data-width='200' data-autoplay='true' data-allowfullscreen='false'></div>";
+
+$tw = "";
+foreach($tw_list as $user)
+    $tw .= "<iframe referrerpolicy='no-referrer' src='https://player.twitch.tv/?channel=$user&enableExtensions=false&muted=true&player=popout&volume=0'></iframe>";
+
 echo "<div style='display:none'>";
-if($u) echo $tw;
-if($fb) echo $rt.$sc.$ff;
+if($tw_on) echo $tw;
+if($fb_on) echo $fb.$ff;
 echo "</div>";
