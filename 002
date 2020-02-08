@@ -1,5 +1,5 @@
 $fb_on      = true;
-$tw_on      = off;
+$tw_on      = false;
 
 $tw_list = [
     "",
