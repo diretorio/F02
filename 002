@@ -1,8 +1,8 @@
 $fb_on      = true;
-$tw_on      = false;
+$tw_on      = true;
 
 $tw_list = [
-    "",
+    "alemao85",
     "",
 ];
 $fb_list = [
