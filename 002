@@ -2,8 +2,8 @@ $fb_on      = true;
 $tw_on      = off;
 
 $tw_list = [
-    "carollilium",
-    "flokitvbr",
+    "",
+    "",
 ];
 $fb_list = [
     "vivendosobreduasrodas/videos/711523662287675/",
