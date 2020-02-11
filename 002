@@ -2,7 +2,7 @@ $fb_on      = true;
 $tw_on      = true;
 
 $tw_list = [
-    "",
+    "ochialla",
     "",
 ];
 $fb_list = [
